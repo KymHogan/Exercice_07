@@ -8,7 +8,20 @@ fs.readFile('06_fichier.json', 'utf8', function (err, data){
 	console.log(obj.toString());
 });
 
+function ecritureTableauProvince(){
 
+	var sChaine = "";
+
+	sChaine += "<h1>Tableau de provinces</h1>";
+	sChaine += "<table>";
+	for (province in obj){
+
+		sChaine += "<tr><td>" + province + "</td><td>" + obj[province].toString() + "</td></tr>";
+	}
+	sChaine += "</table>";
+
+	return sChaine;
+}
 
 http.createServer(function(request, response) {
   response.writeHead(200, {"Content-Type": "text/html; charset=utf8"});
