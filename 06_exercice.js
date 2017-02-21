@@ -25,7 +25,7 @@ function ecritureTableauProvince(){
 
 http.createServer(function(request, response) {
   response.writeHead(200, {"Content-Type": "text/html; charset=utf8"});
-  response.write("<style>table {border-collapse: collapse;}table, th, td {border: 1px solid black;}td {padding:3%;}</style>");
+  
 
   response.write(ecritureTableauProvince());	
 
